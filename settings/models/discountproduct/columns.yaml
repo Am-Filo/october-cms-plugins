@@ -1,0 +1,11 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    counts:
+        label: Количество
+        searchable: true
+    sale:
+        label: Скидка
+        searchable: true

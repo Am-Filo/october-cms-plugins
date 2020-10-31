@@ -1,0 +1,27 @@
+feedback:
+  label: Форма
+  view:
+    list: $/gms/feedback/models/feedback/columns.yaml
+    toolbarButtons: add|remove
+  manage:
+    form: $/gms/feedback/models/feedback/fields.yaml
+    showCheckboxes: true
+    showSearch: true
+inputs:
+  label: Поля формы
+  view:
+    list: $/gms/feedback/models/input/columns.yaml
+    toolbarButtons: create|delete
+  manage:
+    form: $/gms/feedback/models/input/fields.yaml
+    showCheckboxes: true
+    showSearch: true
+mails:
+  label: Почта
+  view:
+    list: $/gms/feedback/models/send/columns.yaml
+    toolbarButtons: create|delete
+  manage:
+    form: $/gms/feedback/models/send/fields.yaml
+    showCheckboxes: true
+    showSearch: true

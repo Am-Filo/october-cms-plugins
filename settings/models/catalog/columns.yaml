@@ -1,0 +1,59 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    title:
+        label: Товар
+        searchable: true
+    price:
+        label: Цена
+        searchable: true
+    slug:
+        label: ссылка
+        searchable: true
+        searchScope: true
+    enable:
+        label: Товар активен?
+        type: switch
+    category_id:
+        label: ID категории
+        searchable: true
+    count:
+        label: Количество
+        searchable: true
+    add_basket_switcher:
+        label: Добавление в корзину
+        searchable: true
+        type: switch
+    price_swicher:
+        label: Вывод цены
+        searchable: true
+        type: switch
+    count_swicher:
+        label: Вывод количества
+        searchable: true
+        type: switch
+    new_swicher:
+        label: Вывод инфоблока
+        searchable: true
+        type: switch
+    short_swicher:
+        label: Вывод основного описания
+        searchable: true
+        type: switch
+    content_swicher:
+        label: Вывод основных приемуществ
+        searchable: true
+        type: switch
+    characteristic_swicher:
+        label: Вывод характеристик
+        searchable: true
+        type: switch
+    created_at:
+        label: Создано
+    updated_at:
+        label: Изменено

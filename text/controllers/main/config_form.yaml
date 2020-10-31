@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Main
+
+# Model Form Field configuration
+form: $/gms/text/models/main/fields.yaml
+
+# Model Class name
+modelClass: Gms\Text\Models\Main
+
+# Default redirect location
+defaultRedirect: gms/text/main
+
+# Create page
+create:
+    title: Create Main
+    redirect: gms/text/main/update/:id
+    redirectClose: gms/text/main
+
+# Update page
+update:
+    title: Edit Main
+    redirect: gms/text/main
+    redirectClose: gms/text/main
+
+# Preview page
+preview:
+    title: Preview Main

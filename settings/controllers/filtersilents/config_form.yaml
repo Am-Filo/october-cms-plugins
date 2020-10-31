@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Filter Silent
+
+# Model Form Field configuration
+form: $/gms/settings/models/filtersilent/fields.yaml
+
+# Model Class name
+modelClass: Gms\Settings\Models\FilterSilent
+
+# Default redirect location
+defaultRedirect: gms/settings/filtersilents
+
+# Create page
+create:
+    title: Create Filter Silent
+    redirect: gms/settings/filtersilents/update/:id
+    redirectClose: gms/settings/filtersilents
+
+# Update page
+update:
+    title: Edit Filter Silent
+    redirect: gms/settings/filtersilents
+    redirectClose: gms/settings/filtersilents
+
+# Preview page
+preview:
+    title: Preview Filter Silent

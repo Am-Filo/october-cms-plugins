@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Filter Filtration Systemr
+
+# Model Form Field configuration
+form: $/gms/settings/models/filterfiltrationsystemr/fields.yaml
+
+# Model Class name
+modelClass: Gms\Settings\Models\FilterFiltrationSystemr
+
+# Default redirect location
+defaultRedirect: gms/settings/filterfiltrationsystemrs
+
+# Create page
+create:
+    title: Create Filter Filtration Systemr
+    redirect: gms/settings/filterfiltrationsystemrs/update/:id
+    redirectClose: gms/settings/filterfiltrationsystemrs
+
+# Update page
+update:
+    title: Edit Filter Filtration Systemr
+    redirect: gms/settings/filterfiltrationsystemrs
+    redirectClose: gms/settings/filterfiltrationsystemrs
+
+# Preview page
+preview:
+    title: Preview Filter Filtration Systemr

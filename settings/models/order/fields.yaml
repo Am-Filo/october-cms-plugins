@@ -1,0 +1,69 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    main_details_section:
+        label: Сведения о заказе
+        type: section
+        span: full
+        comment: Номер заказа и статус
+    order_id:
+        label: Номер заказа
+        disabled: true
+        span: left
+    status:
+        label: Статус заказа
+        type: dropdown
+        span: right
+        options:
+            'Новая заявка': Новая заявка
+            'На рассмотрении': На рассмотрении
+            'Отклонено': Отклонено
+            'Выполнен': Выполнен
+    main_details_section_1:
+        label: Информация о заказе
+        type: section
+        span: full
+        comment: Сумма заказа, количество товаров, товары
+    sum:
+        label: Сумма заказа
+        span: left
+    count:
+        label: Количество товаров в заказе
+        span: right
+    main_details_section_4:
+        label: Информация о Заказанных Товарах
+        type: section
+        span: full
+    product_in_order:
+        label: Товары в Заказе
+        span: full
+        oc.commentPosition: ''
+        nameForm: id
+        descriptionForm: description
+        type: partial
+        path: field_prod_order
+    main_details_section_2:
+        label: Информация о заказчике
+        type: section
+        span: full
+        comment: ФИО, номер телефона, адрес, дополнительная информация
+    user_id:
+        label: Заказчик (ФИО)
+        span: left
+    tel:
+        label: Номер телефона клиента
+        span: right
+    adress:
+        label: Адрес доставки
+        span: left
+        type: richeditor
+        toolbarButtons: paragraphFormat|bold|italic|align|formatUL|formatOL|insertImage|insertLink|fullscreen
+        size: large
+    information:
+        label: Дополнительная информация
+        span: right
+        type: richeditor
+        toolbarButtons: paragraphFormat|bold|italic|align|formatUL|formatOL|insertImage|insertLink|fullscreen
+        size: large

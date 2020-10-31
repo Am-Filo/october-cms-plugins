@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Category
+
+# Model Form Field configuration
+form: $/gms/settings/models/category/fields.yaml
+
+# Model Class name
+modelClass: Gms\Settings\Models\Category
+
+# Default redirect location
+defaultRedirect: gms/settings/categorys
+
+# Create page
+create:
+    title: Create Category
+    redirect: gms/settings/categorys/update/:id
+    redirectClose: gms/settings/categorys
+
+# Update page
+update:
+    title: Edit Category
+    redirect: gms/settings/categorys
+    redirectClose: gms/settings/categorys
+
+# Preview page
+preview:
+    title: Preview Category

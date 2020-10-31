@@ -1,0 +1,34 @@
+{% for sproduct in sproducts %}
+{% if sproduct.is_active %}
+
+<div class="modal-header">
+	<h3 class="modal-head-text">{{ sproduct.title }}</h3>
+	<span class="close" onClick="$('#modal-product').css('display', 'none');">&times;</span>
+</div>
+
+<div class="modal-body">
+
+	<div class="col-md-8">
+		<p>price: <b>{{ sproduct.price }}</b></p>
+		<div class="desc">
+			<p>Desctription</p>
+			<small>{{ sproduct.description }}</small>
+		</div>
+		<ul>
+			{% for category in sproduct.categories %}
+			<li>{{ category.category_title }}</li>
+			{% endfor %}
+		</ul>
+	</div>
+
+
+	<div class="col-md-4">
+		{% for image in sproduct.images %}
+		<img src="{{ image.getThumb(80,80, 'crop') }}" alt="">
+		{% endfor %}
+	</div>
+
+
+	{% endif %}
+	{% endfor %}
+</div>

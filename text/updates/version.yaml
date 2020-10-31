@@ -1,0 +1,5 @@
+1.0.1:
+  - Run table migrations
+  - create_services_table.php
+  - create_contacts_table.php
+  - create_mains_table.php

@@ -1,0 +1,67 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    is_active:
+        label: Активен?
+        type: switch
+        span: full
+    title:
+        label: Название товара
+        type: text
+        span: left
+        required: true
+    slug:
+        label: Slug
+        preset:
+            field: title
+            type: slug
+        span: right
+        type: text
+        required: true
+    preview_img:
+        label: Изображение товара
+        type: fileupload
+        mode: image
+        span: right
+        imageHeight: 300
+        imageWidth: 400
+        thumbOptions:
+            mode: crop
+            offset:
+                - 0
+                - 0
+            quality: 90
+            sharpen: 0
+            interlace: false
+            extension: auto
+    price:
+        label: Цена товара
+        type: text
+        span: left
+        required: true
+    description:
+        label: Описание товара
+        type: textarea
+        span: left
+        required: true
+    categories:
+        label: Категории
+        type: relation
+        span: full
+        select: category_title
+    images:
+        label: Изображения товара
+        type: fileupload
+        mode: image
+        span: full
+        thumbOptions:
+            mode: crop
+            offset:
+                - 0
+                - 0
+            quality: 90
+            sharpen: 0
+            interlace: false
+            extension: auto

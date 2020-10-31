@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Catalog
+
+# Model Form Field configuration
+form: $/gms/settings/models/catalog/fields.yaml
+
+# Model Class name
+modelClass: Gms\Settings\Models\Catalog
+
+# Default redirect location
+defaultRedirect: gms/settings/catalogs
+
+# Create page
+create:
+    title: Create Catalog
+    redirect: gms/settings/catalogs/update/:id
+    redirectClose: gms/settings/catalogs
+
+# Update page
+update:
+    title: Edit Catalog
+    redirect: gms/settings/catalogs
+    redirectClose: gms/settings/catalogs
+
+# Preview page
+preview:
+    title: Preview Catalog

@@ -1,0 +1,27 @@
+{% for product in products %}
+{% if product.is_active %}
+
+<div class="col-md-4 col-sm-6 col-xs-12 shop-item-wrap">
+	<div class="shop-item">
+		<img src="{{ product.preview_img.getThumb(500,350, 'crop') }}" alt="">
+		<div class="shop-item-info">
+			<div class="info-block-1">
+				<p class="item-title">{{ product.title }}</p>
+				<span class="manufacturer">Боровичи мебель</span>
+			</div>
+			<div class="info-block-2">
+				<p class="price">Цена: {{ product.price }} р.</p>
+				<a
+				data-request="products::onViewProduct" 
+				data-request-update="productmd: '#product_single'" 
+				data-request-data="id: '{{ product.id }}'" 
+				data-attach-loading 
+				class="modal-btn-product"
+				id="modal-btn">Посмотреть</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endif %}
+{% endfor %}

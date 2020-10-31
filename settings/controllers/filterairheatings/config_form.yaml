@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Filter Air Heating
+
+# Model Form Field configuration
+form: $/gms/settings/models/filterairheating/fields.yaml
+
+# Model Class name
+modelClass: Gms\Settings\Models\FilterAirHeating
+
+# Default redirect location
+defaultRedirect: gms/settings/filterairheatings
+
+# Create page
+create:
+    title: Create Filter Air Heating
+    redirect: gms/settings/filterairheatings/update/:id
+    redirectClose: gms/settings/filterairheatings
+
+# Update page
+update:
+    title: Edit Filter Air Heating
+    redirect: gms/settings/filterairheatings
+    redirectClose: gms/settings/filterairheatings
+
+# Preview page
+preview:
+    title: Preview Filter Air Heating

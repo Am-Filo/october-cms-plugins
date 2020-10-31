@@ -1,0 +1,6 @@
+1.0.1:
+  - Run table migrations
+  - create_catalogs_table.php
+  - create_categories_table.php
+  - create_orders_table.php
+  - create_user_orders_table.php

@@ -1,0 +1,83 @@
+fields:
+  title:
+      label: Название
+      type: text
+      span: left
+      required: 1
+      comment: Название вашего товара
+  slug:
+      label: Slug
+      preset:
+          field: title
+          type: slug
+      span: right
+      type: text
+      comment: Ссылка (доп опция)
+  enable:
+      label: Включить слайд
+      type: switch
+      span: full
+      comment: Вывод слайда на сайте
+  url_swicher:
+      label: Произвольная ссылка
+      type: switch
+      span: left
+      default: false
+      comment: Добавить к слайду произвольную ссылку
+  url:
+      label: Ссылка
+      type: text
+      comment: Произвольная ссылка на какой-то контент или любая другая ссылка. Вид ссылки ( http://examlpe.site/your_url). РАБОТАЕТ ПРИ НАЖАТИИ НА КАРТИНКУ СЛАЙДА
+      span: right
+      trigger:
+        action: show
+        field: url_swicher
+        condition: checked
+  info_enable:
+      label: Добавить информацию на слайд
+      type: switch
+      span: full
+      default: false
+      comment: Добавляет доболнительный инфоблок на слайд
+  main_enable:
+      label: Добавить заголовок слайда
+      type: switch
+      comment: Добавляем текст заголовка для слайда
+      span: left
+      trigger:
+        action: show
+        field: info_enable
+        condition: checked
+  main_title:
+      label: Заголовок слайда
+      type: text
+      comment: Текст заголовка слайда
+      span: right
+      trigger:
+        action: show
+        field: main_enable
+        condition: checked
+  desc_enable:
+      label: Добавить описание слайда
+      type: switch
+      comment: Добавляем текст заголовка для слайда
+      span: full
+      trigger:
+        action: show
+        field: info_enable
+        condition: checked
+  text:
+      label: Описание слайда
+      type: richeditor
+      comment: Добавляем описание слайда
+      span: full
+      trigger:
+        action: show
+        field: desc_enable
+        condition: checked
+  attachment:
+      label: Изображение слайда
+      type: fileupload
+      span: full
+      mode: image
+      required: 1

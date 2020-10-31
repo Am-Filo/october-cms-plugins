@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Filter Humidity Sensor
+
+# Model Form Field configuration
+form: $/gms/settings/models/filterhumiditysensor/fields.yaml
+
+# Model Class name
+modelClass: Gms\Settings\Models\FilterHumiditySensor
+
+# Default redirect location
+defaultRedirect: gms/settings/filterhumiditysensors
+
+# Create page
+create:
+    title: Create Filter Humidity Sensor
+    redirect: gms/settings/filterhumiditysensors/update/:id
+    redirectClose: gms/settings/filterhumiditysensors
+
+# Update page
+update:
+    title: Edit Filter Humidity Sensor
+    redirect: gms/settings/filterhumiditysensors
+    redirectClose: gms/settings/filterhumiditysensors
+
+# Preview page
+preview:
+    title: Preview Filter Humidity Sensor

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Service
+
+# Model Form Field configuration
+form: $/gms/text/models/service/fields.yaml
+
+# Model Class name
+modelClass: Gms\Text\Models\Service
+
+# Default redirect location
+defaultRedirect: gms/text/services
+
+# Create page
+create:
+    title: Create Service
+    redirect: gms/text/services/update/:id
+    redirectClose: gms/text/services
+
+# Update page
+update:
+    title: Edit Service
+    redirect: gms/text/services
+    redirectClose: gms/text/services
+
+# Preview page
+preview:
+    title: Preview Service

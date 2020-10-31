@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Product
+
+# Model Form Field configuration
+form: $/gms/landing/models/product/fields.yaml
+
+# Model Class name
+modelClass: Gms\Landing\Models\Product
+
+# Default redirect location
+defaultRedirect: gms/landing/products
+
+# Create page
+create:
+    title: Create Product
+    redirect: gms/landing/products/update/:id
+    redirectClose: gms/landing/products
+
+# Update page
+update:
+    title: Edit Product
+    redirect: gms/landing/products
+    redirectClose: gms/landing/products
+
+# Preview page
+preview:
+    title: Preview Product

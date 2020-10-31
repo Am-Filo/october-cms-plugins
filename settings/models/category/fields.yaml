@@ -1,0 +1,313 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+tabs:
+  fields:
+    title:
+        label: Название
+        type: text
+        span: left
+        required: 1
+        tab: 'Основное'
+    slug:
+        label: Slug
+        preset:
+            field: title
+            type: slug
+        span: right
+        type: text
+        tab: 'Основное'
+    enable:
+        label: Включить категорию
+        type: switch
+        span: full
+        tab: 'Основное'
+    content:
+        label: Текст категории
+        type: richeditor
+        span: full
+        size: giant
+        tab: 'Основное'
+    title_filter:
+        label: Название фильтра
+        type: text
+        span: left
+        required: 1
+        tab: 'Фильтр'
+        comment: 'Например - Фильтр'
+        default: 'Фильтр'
+        
+    enable_filter:
+        label: Включить фильтр
+        type: switch
+        span: full
+        tab: 'Фильтр'
+        default: false
+        comment: ''   
+        
+    enable_manufacturer:
+        label: Добавить производителя
+        type: switch
+        span: full
+        tab: 'Фильтр'
+        default: false
+        comment: ''  
+        trigger:
+          action: show
+          field: enable_filter
+          condition: checked
+    filter_manufacturer:
+        label: Производитель
+        type: partial
+        path: filter_manufacturer
+        span: full
+        tab: 'Фильтр'
+        trigger:
+          action: show
+          field: enable_manufacturer
+          condition: checked
+          
+    enable_performance:
+        label: Добавить производительность
+        type: switch
+        span: full
+        tab: 'Фильтр'
+        default: false
+        comment: ''      
+        trigger:
+          action: show
+          field: enable_filter
+          condition: checked
+    filter_performance:
+        label: Производительность
+        type: partial
+        path: filter_performance
+        span: full
+        tab: 'Фильтр'
+        trigger:
+          action: show
+          field: enable_performance
+          condition: checked
+          
+    enable_filtration_system:
+        label: Добавить систему фильтрации
+        type: switch
+        span: full
+        tab: 'Фильтр'
+        default: false
+        comment: ''      
+        trigger:
+          action: show
+          field: enable_filter
+          condition: checked
+    filter_filtration_system:
+        label: Система фильтрации
+        type: partial
+        path: filter_filtration_system
+        span: full
+        tab: 'Фильтр'
+        trigger:
+          action: show
+          field: enable_filtration_system
+          condition: checked
+          
+    enable_air_heating:
+        label: Добавить подогрев воздуха
+        type: switch
+        span: full
+        tab: 'Фильтр'
+        default: false
+        comment: ''      
+        trigger:
+          action: show
+          field: enable_filter
+          condition: checked
+    filter_air_heating:
+        label: Подогрев воздуха
+        type: partial
+        path: filter_air_heating
+        span: full
+        tab: 'Фильтр'
+        trigger:
+          action: show
+          field: enable_air_heating
+          condition: checked
+          
+    enable_silent:
+        label: Добавить уровень шума
+        type: switch
+        span: full
+        tab: 'Фильтр'
+        default: false
+        comment: ''       
+        trigger:
+          action: show
+          field: enable_filter
+          condition: checked
+    filter_silent:
+        label: Уровень шума
+        type: partial
+        path: filter_silent
+        span: full
+        tab: 'Фильтр'
+        trigger:
+          action: show
+          field: enable_silent
+          condition: checked
+    
+    enable_humidity_sensor:
+        label: Добавить датчик влажности
+        type: switch
+        span: full
+        tab: 'Фильтр'
+        default: false
+        comment: ''  
+        trigger:
+          action: show
+          field: enable_filter
+          condition: checked
+    filter_humidity_sensor:
+        label: Датчик влажности
+        type: partial
+        path: filter_humidity_sensor
+        span: full
+        tab: 'Фильтр'
+        trigger:
+          action: show
+          field: enable_humidity_sensor
+          condition: checked
+    
+    enable_humidity_timer:
+        label: Добавить таймер влажности
+        type: switch
+        span: full
+        tab: 'Фильтр'
+        default: false
+        comment: ''  
+        trigger:
+          action: show
+          field: enable_filter
+          condition: checked
+    filter_humidity_timer:
+        label: Таймер влажности
+        type: partial
+        path: filter_humidity_timer
+        span: full
+        tab: 'Фильтр'
+        trigger:
+          action: show
+          field: enable_humidity_timer
+          condition: checked
+    
+    enable_type:
+        label: Добавить тип
+        type: switch
+        span: full
+        tab: 'Фильтр'
+        default: false
+        comment: ''  
+        trigger:
+          action: show
+          field: enable_filter
+          condition: checked
+    filter_type:
+        label: Тип
+        type: partial
+        path: filter_type
+        span: full
+        tab: 'Фильтр'
+        trigger:
+          action: show
+          field: enable_type
+          condition: checked
+    
+    enable_colour:
+        label: Добавить цвет
+        type: switch
+        span: full
+        tab: 'Фильтр'
+        default: false
+        comment: ''  
+        trigger:
+          action: show
+          field: enable_filter
+          condition: checked
+    filter_colour:
+        label: Цвет
+        type: partial
+        path: filter_colour
+        span: full
+        tab: 'Фильтр'
+        trigger:
+          action: show
+          field: enable_colour
+          condition: checked
+    
+    enable_surface_temperature:
+        label: Добавить температуру поверхности
+        type: switch
+        span: full
+        tab: 'Фильтр'
+        default: false
+        comment: ''  
+        trigger:
+          action: show
+          field: enable_filter
+          condition: checked
+    filter_surface_temperature:
+        label: Температура поверхности
+        type: partial
+        path: filter_surface_temperature
+        span: full
+        tab: 'Фильтр'
+        trigger:
+          action: show
+          field: enable_surface_temperature
+          condition: checked
+    
+    enable_power:
+        label: Добавить мощность
+        type: switch
+        span: full
+        tab: 'Фильтр'
+        default: false
+        comment: ''  
+        trigger:
+          action: show
+          field: enable_filter
+          condition: checked
+    filter_power:
+        label: Мощность
+        type: partial
+        path: filter_power
+        span: full
+        tab: 'Фильтр'
+        trigger:
+          action: show
+          field: enable_power
+          condition: checked
+    enable_seo:
+          label: Включить title & description
+          type: switch
+          span: full
+          tab: 'SEO'
+          default: false
+          comment: ''  
+    title_seo:
+        label: meta - title
+        type: text
+        span: left
+        tab: 'SEO'
+        trigger:
+          action: show
+          field: enable_seo
+          condition: checked
+    desc_seo:
+        label: meta - description
+        type: text
+        span: right
+        tab: 'SEO'
+        trigger:
+          action: show
+          field: enable_seo
+          condition: checked

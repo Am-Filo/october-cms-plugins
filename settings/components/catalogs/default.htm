@@ -1,0 +1,24 @@
+<section class="regular slider">
+	{% set category =  __SELF__.ViewProducts %}
+	{% set slug_category =  __SELF__.GetCategory %}
+	{% for catalog in category %}
+	{% if	catalog.enable %}
+	<div>
+		<div class="col-sm-12 col-md-12 col-xs-12">
+			<div class="thumbnail">
+				<h3><a href="/catalog/{{slug_category.slug}}/{{ catalog.slug }}">{{ catalog.title }}</a></h3>
+				{% if catalog.price_swicher %}<h4>{{ catalog.price }} рублей</h4>{% endif %}
+				<a href="/catalog/{{slug_category.slug}}/{{ catalog.slug }}">
+					<img alt="..." src="{{ catalog.attachments[0].path |resize(250, 250, { mode: 'crop', quality: '20', extension: 'png' }) }}">
+				</a>
+				{% if catalog.add_basket_switcher %}
+				<div class="caption">
+					<a data-request-update="bskt: '#basket'" data-request-data="id: {{catalog.id}}, quantity: 1" data-request="Catalogs::onFAdd" data-attach-loading class="g-btn btn-block">Добавить в корзину</a>
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	{% endif %}
+	{% endfor %}
+</section>

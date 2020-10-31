@@ -1,0 +1,9 @@
+discount_product:
+  label: Скидки для товара
+  view:
+    list: $/gms/settings/models/discountproduct/columns.yaml
+    toolbarButtons: add|remove|create|delete
+  manage:
+    form: $/gms/settings/models/discountproduct/fields.yaml
+    showCheckboxes: true
+    showSearch: true

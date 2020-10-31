@@ -1,0 +1,27 @@
+<section class="one-time slider">
+	{% for slider in Sliders.getSlides %} 
+	{% if slider.enable %}
+	<div class="sl__slide">
+		{% if slider.url_swicher %}
+		<a href="{{slider.url}}">
+			<img class="sl__img" src="{{ slider.attachment.path |resize(1140, 309, { mode: 'crop', quality: '60', extension: 'png'}) }}">
+		</a>
+		{% else %}
+		<img class="sl__img" src="{{ slider.attachment.path |resize(1140, 309, { mode: 'crop', quality: '60', extension: 'png'}) }}">
+		{% endif %}
+		{% if slider.info_enable %}
+		<div class="sl__text">
+			{% if slider.main_enable %}
+			<h1 class="sl__zag">{{slider.main_title}}</h1>
+			{% endif %}
+			{% if slider.desc_enable %}
+			<p class="sl_desc">
+				{{slider.text|raw}}
+			</p>
+			{% endif %}
+		</div>
+		{% endif %}
+	</div>
+	{% endif %}
+	{% endfor %}
+</section>

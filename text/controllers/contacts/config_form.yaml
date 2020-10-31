@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Contact
+
+# Model Form Field configuration
+form: $/gms/text/models/contact/fields.yaml
+
+# Model Class name
+modelClass: Gms\Text\Models\Contact
+
+# Default redirect location
+defaultRedirect: gms/text/contacts
+
+# Create page
+create:
+    title: Create Contact
+    redirect: gms/text/contacts/update/:id
+    redirectClose: gms/text/contacts
+
+# Update page
+update:
+    title: Edit Contact
+    redirect: gms/text/contacts
+    redirectClose: gms/text/contacts
+
+# Preview page
+preview:
+    title: Preview Contact

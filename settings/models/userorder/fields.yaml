@@ -1,0 +1,23 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+      label: Название товара
+      type: text
+    count_prod:
+      label: Количество товара
+      type: text
+    main_price:
+      label: Исходная цена товара
+      type: text
+    price:
+      label: Цена за 1 еденицу с учетом скидки
+      type: text
+    sale:
+      label: Скидка *%
+      type: text
+    price_sale:
+      label: Скидка в руб.
+      label: text

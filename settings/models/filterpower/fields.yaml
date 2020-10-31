@@ -1,0 +1,9 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    info:
+        label: Информация
+        type: text
+        span: full

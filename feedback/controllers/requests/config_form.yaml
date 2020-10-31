@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Request
+
+# Model Form Field configuration
+form: $/gms/feedback/models/request/fields.yaml
+
+# Model Class name
+modelClass: Gms\Feedback\Models\Request
+
+# Default redirect location
+defaultRedirect: gms/feedback/requests
+
+# Create page
+create:
+    title: Create Request
+    redirect: gms/feedback/requests/update/:id
+    redirectClose: gms/feedback/requests
+
+# Update page
+update:
+    title: Edit Request
+    redirect: gms/feedback/requests
+    redirectClose: gms/feedback/requests
+
+# Preview page
+preview:
+    title: Preview Request

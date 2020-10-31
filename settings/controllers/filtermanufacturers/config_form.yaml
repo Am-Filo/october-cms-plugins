@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Filter Manufacturer
+
+# Model Form Field configuration
+form: $/gms/settings/models/filtermanufacturer/fields.yaml
+
+# Model Class name
+modelClass: Gms\Settings\Models\FilterManufacturer
+
+# Default redirect location
+defaultRedirect: gms/settings/filtermanufacturers
+
+# Create page
+create:
+    title: Create Filter Manufacturer
+    redirect: gms/settings/filtermanufacturers/update/:id
+    redirectClose: gms/settings/filtermanufacturers
+
+# Update page
+update:
+    title: Edit Filter Manufacturer
+    redirect: gms/settings/filtermanufacturers
+    redirectClose: gms/settings/filtermanufacturers
+
+# Preview page
+preview:
+    title: Preview Filter Manufacturer

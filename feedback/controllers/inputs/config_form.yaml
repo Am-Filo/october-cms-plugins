@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Input
+
+# Model Form Field configuration
+form: $/gms/feedback/models/input/fields.yaml
+
+# Model Class name
+modelClass: Gms\Feedback\Models\Input
+
+# Default redirect location
+defaultRedirect: gms/feedback/inputs
+
+# Create page
+create:
+    title: Create Input
+    redirect: gms/feedback/inputs/update/:id
+    redirectClose: gms/feedback/inputs
+
+# Update page
+update:
+    title: Edit Input
+    redirect: gms/feedback/inputs
+    redirectClose: gms/feedback/inputs
+
+# Preview page
+preview:
+    title: Preview Input

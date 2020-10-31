@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Filter Type
+
+# Model Form Field configuration
+form: $/gms/settings/models/filtertype/fields.yaml
+
+# Model Class name
+modelClass: Gms\Settings\Models\FilterType
+
+# Default redirect location
+defaultRedirect: gms/settings/filtertypes
+
+# Create page
+create:
+    title: Create Filter Type
+    redirect: gms/settings/filtertypes/update/:id
+    redirectClose: gms/settings/filtertypes
+
+# Update page
+update:
+    title: Edit Filter Type
+    redirect: gms/settings/filtertypes
+    redirectClose: gms/settings/filtertypes
+
+# Preview page
+preview:
+    title: Preview Filter Type

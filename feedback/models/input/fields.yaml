@@ -1,0 +1,65 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    is_active:
+        label: Активна?
+        type: switch
+        span: full
+    title:
+        label: Название поля
+        type: text
+        comment: например 'Имя'
+        span: left
+        required: true
+    name:
+        label: Значение аттрибута name
+        comment: Пример your_name | можно не менять, если стоит '-' между словами, заменить на '_'
+        type: text
+        span: right
+        required: true
+        preset:
+            field: title
+            type: slug
+    type:
+        label: Тип поля
+        type: dropdown
+        options:
+            'tel': Телефон
+            'text': Текст
+            'email': E-mail
+            'radio' : Radio (исползуйте одинаковые аттрибуты поля name)
+            'date' : Дата
+            'range' : Диапазон
+        span: full
+        required: true
+    s_s1:
+        label: Аттрибуты поля
+        type: section
+    placeholder:
+        label: Название placeholder'
+        type: text
+        span: left
+        comment: например 'Ваше имя'
+        required: true
+    required:
+        label: Обязательное?
+        type: switch
+        span: right
+    input_id:
+        label: Идентификатор поля
+        type: text
+        span: left
+        comment: Вписывать без кавычек только id через пробел
+    input_class:
+        label: Класс поля
+        type: text
+        span: right
+        comment: Вписывать без кавычек только class через пробел
+    mask:
+        label: Pattern поля
+        type: text
+        span: full
+        comment: Вписывать без кавычек только pattern
+    

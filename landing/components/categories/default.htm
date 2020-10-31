@@ -1,0 +1,11 @@
+{% set categories  = categories.viewCategory()  %}
+
+{% for category in categories | reverse %}
+<a 
+	data-request="categories::onViewProducts" 
+	data-request-update="catproducts: '#catproduct'" 
+	data-request-data="id: '{{ category.id }}'" 
+	data-attach-loading >
+{{ category.category_title }}
+</a>
+{% endfor %}

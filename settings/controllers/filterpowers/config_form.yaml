@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Filter Power
+
+# Model Form Field configuration
+form: $/gms/settings/models/filterpower/fields.yaml
+
+# Model Class name
+modelClass: Gms\Settings\Models\FilterPower
+
+# Default redirect location
+defaultRedirect: gms/settings/filterpowers
+
+# Create page
+create:
+    title: Create Filter Power
+    redirect: gms/settings/filterpowers/update/:id
+    redirectClose: gms/settings/filterpowers
+
+# Update page
+update:
+    title: Edit Filter Power
+    redirect: gms/settings/filterpowers
+    redirectClose: gms/settings/filterpowers
+
+# Preview page
+preview:
+    title: Preview Filter Power

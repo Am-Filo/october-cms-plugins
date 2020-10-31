@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Additionalservice
+
+# Model Form Field configuration
+form: $/gms/landing/models/additionalservice/fields.yaml
+
+# Model Class name
+modelClass: Gms\Landing\Models\Additionalservice
+
+# Default redirect location
+defaultRedirect: gms/landing/additionalservices
+
+# Create page
+create:
+    title: Create Additionalservice
+    redirect: gms/landing/additionalservices/update/:id
+    redirectClose: gms/landing/additionalservices
+
+# Update page
+update:
+    title: Edit Additionalservice
+    redirect: gms/landing/additionalservices
+    redirectClose: gms/landing/additionalservices
+
+# Preview page
+preview:
+    title: Preview Additionalservice

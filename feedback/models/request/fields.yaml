@@ -1,0 +1,18 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    created_at:
+        label: Дата
+        disabled: true
+    title:
+        label: Назание формы
+        type: text
+        disabled: true
+        span: full
+    description:
+        label: Заявка
+        type: richeditor
+        size: huge
+        span: full

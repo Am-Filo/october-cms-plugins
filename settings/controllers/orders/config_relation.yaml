@@ -1,0 +1,18 @@
+product:
+  label: Товары
+  view:
+    list: $/gms/settings/models/catalog/columns.yaml
+    toolbarButtons: add|remove
+  manage:
+    form: $/gms/settings/models/catalog/fields.yaml
+    showCheckboxes: true
+    showSearch: true
+product_in_order:
+  label: Товары в заказе
+  view:
+    list: $/gms/settings/models/userorder/columns.yaml
+    toolbarButtons: add|remove
+  manage:
+    form: $/gms/settings/models/userorder/fields.yaml
+    showCheckboxes: true
+    showSearch: true

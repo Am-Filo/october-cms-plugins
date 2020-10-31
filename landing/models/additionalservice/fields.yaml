@@ -1,0 +1,36 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    switch_add:
+        label: Активен?
+        type: switch
+        span: left
+        required: true
+    title:
+        label: Название
+        type: text
+        span: left
+        required: true
+    additional_image:
+        label: Изображение
+        type: fileupload
+        mode: image
+        span: right
+        imageHeight: 350
+        imageWidth: 550
+        thumbOptions:
+            mode: crop
+            offset:
+                - 0
+                - 0
+            quality: 90
+            sharpen: 0
+            interlace: false
+            extension: auto
+    description:
+        label: Описание
+        type: richeditor
+        span: full
+        required: true

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Категория
+
+# Model Form Field configuration
+form: $/gms/landing/models/category/fields.yaml
+
+# Model Class name
+modelClass: Gms\Landing\Models\Category
+
+# Default redirect location
+defaultRedirect: gms/landing/categories
+
+# Create page
+create:
+    title: Создание категории
+    redirect: gms/landing/categories/update/:id
+    redirectClose: gms/landing/categories
+
+# Update page
+update:
+    title: Изменение категории
+    redirect: gms/landing/categories
+    redirectClose: gms/landing/categories
+
+# Preview page
+preview:
+    title: Просмотр категории

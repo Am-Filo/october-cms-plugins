@@ -1,0 +1,11 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    category_title:
+        label: Каталог
+        searchable: true
+    slug:
+        label: url
+        searchable: true

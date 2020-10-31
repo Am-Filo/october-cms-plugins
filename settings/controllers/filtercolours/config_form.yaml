@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Filter Colour
+
+# Model Form Field configuration
+form: $/gms/settings/models/filtercolour/fields.yaml
+
+# Model Class name
+modelClass: Gms\Settings\Models\FilterColour
+
+# Default redirect location
+defaultRedirect: gms/settings/filtercolours
+
+# Create page
+create:
+    title: Create Filter Colour
+    redirect: gms/settings/filtercolours/update/:id
+    redirectClose: gms/settings/filtercolours
+
+# Update page
+update:
+    title: Edit Filter Colour
+    redirect: gms/settings/filtercolours
+    redirectClose: gms/settings/filtercolours
+
+# Preview page
+preview:
+    title: Preview Filter Colour

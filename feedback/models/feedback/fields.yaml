@@ -1,0 +1,76 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    is_active:
+        label: Активна?
+        type: switch
+        span: full
+    title:
+        label: Название формы
+        type: text
+        span: full
+    s_s1:
+        label: Кнопка submit
+        type: section
+    submit_text:
+        label: Название кнопки
+        type: text
+        span: full
+    script_switch:
+        label: onClick
+        type: switch
+        span: left
+    submit_scripts:
+        label: onClick событие
+        type: text
+        comment: 'Только скрипты например: alert("ex.1");alert("ex.2");'
+        span: right
+        trigger:
+          action: show
+          field: script_switch
+          condition: checked
+    url_add:
+        label: Приписка к url
+        type: switch
+        span: left
+    custom_url:
+        label: Кастомная приписка к url
+        type: switch
+        comment: 'Если не вводить свой текст, то автоматически добавится (?название_формы_id_формы)'
+        span: left
+        trigger:
+          action: show
+          field: url_add
+          condition: checked
+    custom_url_text:
+        label: Ваш текст для url
+        comment: 'вписывать с ?'
+        default: '?'
+        type: text
+        span: right
+        trigger:
+          action: show
+          field: custom_url
+          condition: checked
+    s_s2:
+        label: Поля формы (inputs)
+        type: section
+    inputs:
+        label: Поля формы
+        span: full
+        nameForm: id
+        type: partial
+        path: field_feedback_key
+    s_s3:
+        label: Почта
+        type: section
+    mails:
+        label: Почта
+        comment: 'на какую почту будут отправляться заявки'
+        span: full
+        nameForm: id
+        type: partial
+        path: field_send_key
+

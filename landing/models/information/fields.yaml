@@ -1,0 +1,159 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+tabs:
+    fields:
+        title:
+          label: Название сайта
+          type: text
+          span: full
+          required: true
+          tab: 'Основная информация'
+        sections_s1:
+          type: section
+          span: full
+          tab: 'Основная информация'
+        phone:
+          label: Телефон в шапке и футере
+          type: text
+          span: left
+          required: true
+          tab: 'Основная информация'
+        phone_tag:
+          label: Телефон в шапке и футере без пробелов и скобок
+          type: text
+          span: right
+          tab: 'Основная информация'
+        sections_s2:
+          type: section
+          span: full
+          tab: 'Основная информация'
+        time_visit:
+          label: Веремя работы
+          type: text
+          span: left
+          required: true
+          tab: 'Основная информация'
+        footer_adress:
+          label: Адрес в футере
+          type: text
+          span: right
+          required: true
+          tab: 'Основная информация'
+          required: true
+        sections_s3:
+          type: section
+          span: full
+          tab: 'Основная информация'
+        logo_head:
+          label: Лого header
+          type: fileupload
+          mode: image
+          span: left
+          tab: 'Основная информация'
+        logo_bottom:
+          label: Лого footer
+          type: fileupload
+          mode: image
+          span: right
+          tab: 'Основная информация'
+        slogan:
+          label: Текст под меню
+          type: richeditor
+          span: left
+          required: true
+          tab: 'Тексты'
+        top_img_form:
+          label: Изображение рядом с формой
+          type: fileupload
+          mode: image
+          span: right
+          tab: 'Тексты'
+        icons_form_top:
+          label: Иконки под верхней формой
+          type: richeditor
+          span: left
+          required: true
+          tab: 'Тексты'
+        icons_garanty:
+          label: 3 блока информации
+          type: richeditor
+          span: left
+          required: true
+          tab: 'Тексты'
+        sections_s4:
+          type: section
+          span: full
+          tab: 'Тексты'
+        get_kitchen:
+          label: Текст над каталогом
+          type: text
+          span: left
+          required: true
+          tab: 'Тексты'
+        sections_s5:
+          type: section
+          span: full
+          tab: 'Тексты'
+        switch_download:
+          label: Включить кнопку
+          type: switch
+          span: left
+          required: true
+          tab: 'Тексты'
+        download_text_catalog:
+          label: Текст кнопки сакчать каталог
+          type: text
+          span: left
+          required: true
+          tab: 'Тексты'
+        download_catalog:
+          label: Скачиваемый документ каталога
+          type: fileupload
+          mode: file
+          span: right
+          tab: 'Тексты'
+        sections_s6:
+          type: section
+          span: full
+          tab: 'Тексты'
+        add_services_txt:
+          label: Текст доп сервисов
+          type: text
+          span: left
+          required: true
+          tab: 'Тексты'
+        map_h_text:
+          label: Текст над картой
+          type: text
+          span: left
+          required: true
+          tab: 'Карта'
+        icons_map_bot:
+          label: Иконки с текстом под картой
+          type: richeditor
+          span: full
+          required: true
+          size: large
+          tab: 'Карта'
+        zamer_switch:
+          label: Включить кнопку
+          type: switch
+          span: left
+          tab: 'Карта'
+        zamer_name:
+          label: Название кнопки
+          type: text
+          span: left
+          tab: 'Карта'
+        credit_switch:
+          label: Включить кнопку "заявка на кредит"
+          type: switch
+          span: left
+          tab: 'Футер'
+        rasschet_switch:
+          label: Включить кнопку "заявка на рассчет"
+          type: switch
+          span: left
+          tab: 'Футер'

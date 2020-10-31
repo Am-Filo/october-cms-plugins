@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Information
+
+# Model Form Field configuration
+form: $/gms/landing/models/information/fields.yaml
+
+# Model Class name
+modelClass: Gms\Landing\Models\Information
+
+# Default redirect location
+defaultRedirect: gms/landing/informations
+
+# Create page
+create:
+    title: Create Information
+    redirect: gms/landing/informations/update/:id
+    redirectClose: gms/landing/informations
+
+# Update page
+update:
+    title: Edit Information
+    redirect: gms/landing/informations
+    redirectClose: gms/landing/informations
+
+# Preview page
+preview:
+    title: Preview Information

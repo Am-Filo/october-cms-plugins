@@ -1,0 +1,55 @@
+fields:
+    title:
+      label: Название
+      type: text
+      span: full
+      required: 1
+    recup:
+        label: Рекуператор
+        type: richeditor
+        span: left
+        size: large
+        required: 1
+        comment: Рекуператор - это, или другая информация
+    smart:
+        label: Смарт-вентилятор
+        type: richeditor
+        span: right
+        size: large
+        required: 1
+        comment: Смарт-вентилятор - это, или другая информация
+    briz:
+        label: Бризер
+        type: richeditor
+        span: left
+        size: large
+        required: 1
+        comment: Бризер - это, или другая информация
+    wrep:
+        label: Что такое рекуперация воздуха?
+        type: richeditor
+        span: right
+        size: large
+        required: 1
+        comment: Информация
+    wrep1:
+        label: Чум рекуперация лучше другой вентиляции?
+        type: richeditor
+        span: right
+        size: large
+        required: 1
+        comment: Информация
+    wrep2:
+        label: Что такое рекуператор?
+        type: richeditor
+        span: right
+        size: large
+        required: 1
+        comment: Информация
+    wrep3:
+        label: Как выбрать рекуператор?
+        type: richeditor
+        span: right
+        size: large
+        required: 1
+        comment: Информация

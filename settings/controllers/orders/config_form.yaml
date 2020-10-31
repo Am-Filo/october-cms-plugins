@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Order
+
+# Model Form Field configuration
+form: $/gms/settings/models/order/fields.yaml
+
+# Model Class name
+modelClass: Gms\Settings\Models\Order
+
+# Default redirect location
+defaultRedirect: gms/settings/orders
+
+# Create page
+create:
+    title: Create Order
+    redirect: gms/settings/orders/update/:id
+    redirectClose: gms/settings/orders
+
+# Update page
+update:
+    title: Edit Order
+    redirect: gms/settings/orders
+    redirectClose: gms/settings/orders
+
+# Preview page
+preview:
+    title: Preview Order

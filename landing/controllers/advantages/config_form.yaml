@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Advantage
+
+# Model Form Field configuration
+form: $/gms/landing/models/advantage/fields.yaml
+
+# Model Class name
+modelClass: Gms\Landing\Models\Advantage
+
+# Default redirect location
+defaultRedirect: gms/landing/advantages
+
+# Create page
+create:
+    title: Create Advantage
+    redirect: gms/landing/advantages/update/:id
+    redirectClose: gms/landing/advantages
+
+# Update page
+update:
+    title: Edit Advantage
+    redirect: gms/landing/advantages
+    redirectClose: gms/landing/advantages
+
+# Preview page
+preview:
+    title: Preview Advantage

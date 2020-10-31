@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Filter Performance
+
+# Model Form Field configuration
+form: $/gms/settings/models/filterperformance/fields.yaml
+
+# Model Class name
+modelClass: Gms\Settings\Models\FilterPerformance
+
+# Default redirect location
+defaultRedirect: gms/settings/filterperformances
+
+# Create page
+create:
+    title: Create Filter Performance
+    redirect: gms/settings/filterperformances/update/:id
+    redirectClose: gms/settings/filterperformances
+
+# Update page
+update:
+    title: Edit Filter Performance
+    redirect: gms/settings/filterperformances
+    redirectClose: gms/settings/filterperformances
+
+# Preview page
+preview:
+    title: Preview Filter Performance

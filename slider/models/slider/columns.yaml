@@ -1,0 +1,18 @@
+columns:
+    id:
+        label: ID
+        searchable: true
+    title:
+        label: Название
+        searchable: true
+    slug:
+        label: Ссылка
+        searchable: true
+        searchScope: true
+    enable:
+        label: Выводится?
+        type: switch
+    created_at:
+        label: Создано
+    updated_at:
+        label: Изменено

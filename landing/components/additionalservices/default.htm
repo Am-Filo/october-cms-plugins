@@ -1,0 +1,17 @@
+{% for additional_item in addtitional_items|reverse %}
+{% if additional_item.switch_add %}
+
+<div class="col-md-6 col-xs-12 service-item">
+	<div class="service-item-wrap">
+		<p class="service-item-title">{{ additional_item.title }}</p>
+		<div class="clearfix"></div>
+		<div class="content-item" style="background-image: url({{ additional_item.additional_image.path }});">
+			<div class="service-item-info">
+				{{ additional_item.description|raw }}
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endif %}
+{% endfor %}

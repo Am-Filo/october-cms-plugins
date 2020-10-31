@@ -1,0 +1,110 @@
+filter_manufacturer:
+  label: Фильтр производитель
+  view:
+    list: $/gms/settings/models/filtermanufacturer/columns.yaml
+    toolbarButtons: add|remove|create|delete
+  manage:
+    form: $/gms/settings/models/filtermanufacturer/fields.yaml
+    showCheckboxes: true
+    showSearch: true
+    
+filter_performance:
+  label: Фильтр производительности
+  view:
+    list: $/gms/settings/models/filterperformance/columns.yaml
+    toolbarButtons: add|remove|create|delete
+  manage:
+    form: $/gms/settings/models/filterperformance/fields.yaml
+    showCheckboxes: true
+    showSearch: true
+    
+filter_filtration_system:
+  label: Фильтр системы фильтрации
+  view:
+    list: $/gms/settings/models/filterfiltrationsystem/columns.yaml
+    toolbarButtons: add|remove|create|delete|create|delete
+  manage:
+    form: $/gms/settings/models/filterfiltrationsystem/fields.yaml
+    showCheckboxes: true
+    showSearch: true
+    
+filter_air_heating:
+  label: Фильтр подогрева воздуха
+  view:
+    list: $/gms/settings/models/filterairheating/columns.yaml
+    toolbarButtons: add|remove|create|delete
+  manage:
+    form: $/gms/settings/models/filterairheating/fields.yaml
+    showCheckboxes: true
+    showSearch: true
+    
+filter_silent:
+  label: Фильтр безшумности
+  view:
+    list: $/gms/settings/models/filtersilent/columns.yaml
+    toolbarButtons: add|remove|create|delete
+  manage:
+    form: $/gms/settings/models/filtersilent/fields.yaml
+    showCheckboxes: true
+    showSearch: true
+    
+filter_humidity_sensor:
+  label: Фильтр датчика влажности
+  view:
+    list: $/gms/settings/models/filterhumiditysensor/columns.yaml
+    toolbarButtons: add|remove|create|delete
+  manage:
+    form: $/gms/settings/models/filterhumiditysensor/fields.yaml
+    showCheckboxes: true
+    showSearch: true
+    
+filter_humidity_timer:
+  label: Фильтр таймер влажности
+  view:
+    list: $/gms/settings/models/filterhumiditytimer/columns.yaml
+    toolbarButtons: add|remove|create|delete
+  manage:
+    form: $/gms/settings/models/filterhumiditytimer/fields.yaml
+    showCheckboxes: true
+    showSearch: true
+    
+filter_type:
+  label: Фильтр типа
+  view:
+    list: $/gms/settings/models/filtertype/columns.yaml
+    toolbarButtons: add|remove|create|delete
+  manage:
+    form: $/gms/settings/models/filtertype/fields.yaml
+    showCheckboxes: true
+    showSearch: true
+    
+filter_colour:
+  label: Фильтр цвета
+  view:
+    list: $/gms/settings/models/filtercolour/columns.yaml
+    toolbarButtons: add|remove|create|delete
+  manage:
+    form: $/gms/settings/models/filtercolour/fields.yaml
+    showCheckboxes: true
+    showSearch: true
+    
+filter_surface_temperature:
+  label: Фильтр температуры поверхности
+  view:
+    list: $/gms/settings/models/filtersurfacetemperature/columns.yaml
+    toolbarButtons: add|remove|create|delete
+  manage:
+    form: $/gms/settings/models/filtersurfacetemperature/fields.yaml
+    showCheckboxes: true
+    showSearch: true
+    
+filter_power:
+  label: Фильтр мощьности
+  view:
+    list: $/gms/settings/models/filterpower/columns.yaml
+    toolbarButtons: add|remove|create|delete
+  manage:
+    form: $/gms/settings/models/filterpower/fields.yaml
+    showCheckboxes: true
+    showSearch: true
+  

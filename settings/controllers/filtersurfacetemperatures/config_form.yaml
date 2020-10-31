@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Filter Surface Temperature
+
+# Model Form Field configuration
+form: $/gms/settings/models/filtersurfacetemperature/fields.yaml
+
+# Model Class name
+modelClass: Gms\Settings\Models\FilterSurfaceTemperature
+
+# Default redirect location
+defaultRedirect: gms/settings/filtersurfacetemperatures
+
+# Create page
+create:
+    title: Create Filter Surface Temperature
+    redirect: gms/settings/filtersurfacetemperatures/update/:id
+    redirectClose: gms/settings/filtersurfacetemperatures
+
+# Update page
+update:
+    title: Edit Filter Surface Temperature
+    redirect: gms/settings/filtersurfacetemperatures
+    redirectClose: gms/settings/filtersurfacetemperatures
+
+# Preview page
+preview:
+    title: Preview Filter Surface Temperature

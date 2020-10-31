@@ -1,0 +1,18 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    category_title:
+        label: Название категории
+        type: text
+        span: left
+        required: true
+    slug:
+        label: Slug
+        preset:
+            field: category_title
+            type: slug
+        span: right
+        type: text
+        required: true

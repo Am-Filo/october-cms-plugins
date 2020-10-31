@@ -1,0 +1,8 @@
+1.0.1:
+  -  Create feedbacks tables
+  -  create_feedback_table.php
+  -  create_inputs_table.php
+  -  create_requests_table.php
+  -  create_feedback_key_table.php
+  -  create_sends_table.php
+  -  create_send_key_table.php

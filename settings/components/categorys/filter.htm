@@ -1,0 +1,21 @@
+{% set slug_category =  __SELF__.GetCategory %}
+
+{% for catalog in catfilter %}
+<div class="col-md-3 col-sm-4 col-xs-12">
+  <div class="thumbnail">
+    <h3 style="font-size: {{ catalog.fontsz }}px;"><a href="/catalog/{{slug_category.slug}}/{{ catalog.slug }}">{{ catalog.title }}</a></h3>
+    {% if catalog.price_swicher %}
+    <h4>{{ catalog.price }} рублей</h4>{% endif %}
+
+    <a href="/catalog/{{slug_category.slug}}/{{ catalog.slug }}">
+      <img alt="..." src="http://vozduhvdome.su/storage/app/media{{ catalog.attachment_img }} |resize(255, 255, { mode: 'crop', quality: '60', extension: 'png' })">
+    </a>
+    {% if catalog.add_basket_switcher %}
+    <div class="caption">
+      <a data-request-update="bskt: '#basket'" data-request-data="id: {{catalog.id}}, quantity: 1" data-request="Catalogs::onFAdd" data-attach-loading class="g-btn btn-block">Добавить в корзину</a>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+{% endfor %}

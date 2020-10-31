@@ -1,0 +1,61 @@
+{% for feedback in sfeedbacks %}
+{% if feedback.is_active %}
+<div class="modal-header">
+	<span class="close" id="close-request">&times;</span>
+	<br>
+	<h3 class="modal-head-text">{{ feedback.title }}</h3>
+</div>
+
+<div class="modal-body">
+	<div class="form-wrap" id="#successrequest">
+		{% if success %}
+		<div class="form-success">
+			<p>Спасибо за заявку!</p>
+			<small>Скоро с Вами свяжется наш менеджер.</small>
+		</div>
+		{% else %}
+
+		{{ form_ajax('feedbacks::onSendMail', {
+				update: { feedbackmd: '#mdfeedback' },
+			}) }}
+			<input type="text" name="id_form" value="{{ feedback.id }}" style="display: none;">
+			{% for input in feedback.inputs %}
+			{% if input.is_active %}
+			<input
+				type="{{ input.type }}" 
+				name="{{ input.name }}" 
+				{% if input.placeholder %}
+				placeholder="{{ input.placeholder }}" 
+				{% endif %}
+				{% if input.required %}
+				required 
+				{% endif %}
+				{% if input.input_id %}
+				id="{{ input.input_id }}"
+				{% endif %}
+				{% if input.input_class %}
+				class="{{ input.input_class }}"
+				{% endif %}
+				{% if input.mask %}
+				pattern="{{ input.mask }}"
+				{% endif %}
+			>
+			{% if input.type == 'radio' %}
+				{{ input.placeholder }}
+			{% endif %}
+			
+			{% endif %}
+			{% endfor %}
+			<button 
+				type="submit" 
+				{% if feedback.script_switch %}
+				onClick="{{ feedback.submit_scripts }}" 
+				{% endif %}
+			>{{ feedback.submit_text }}</button>
+
+		{{ form_close() }}
+		{% endif %}
+	</div>
+</div>
+{% endif %}
+{% endfor %}

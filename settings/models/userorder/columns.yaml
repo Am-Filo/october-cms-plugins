@@ -1,0 +1,23 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    title:
+      label: Название товара
+      searchable: true
+    count_prod:
+      label: Количество товара
+      searchable: true
+    main_price:
+      label: Исходная цена товара
+      searchable: true
+    price:
+      label: Цена товара с учетом скидки
+      searchable: true
+    sale:
+      label: Скидка *%
+      searchable: true
+    price_sale:
+      label: Скидка в руб.
+      searchable: true

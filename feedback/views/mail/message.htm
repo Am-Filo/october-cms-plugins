@@ -1,0 +1,29 @@
+subject = "Your product has been added to OctoberCMS project"
+==
+
+{{ info_header }},
+
+Форма: {{ title }}
+
+{{ description|raw }}
+
+==
+
+<p>{{ info_header }},</p>
+<p>Форма: {{ title }}</p>
+
+<h3>Информация</h3>
+<hr>
+
+{{ description|raw }}
+
+<hr>
+
+<h3>Дополнительная информация</h3>
+
+<p>ip: {{ ip_info }}</p>
+<p>ip: {{ datetime }}</p>
+
+<hr>
+
+<small>Данное письмо было отправлено автоматически.</small>

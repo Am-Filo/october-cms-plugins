@@ -1,0 +1,29 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    order_id:
+        label: Номер заказа
+        searchable: true
+    user_id:
+        label: Заказчик
+        searchable: true
+    tel:
+        label: Номер телефона клиента
+    count:
+        label: Количество
+        searchable: true
+    sum:
+        label: Сумма заказа
+    status:
+        label: Статус заказа
+        searchable: true
+        options:
+            'Новая заявка': Новая заявка
+            'На рассмотрении': На рассмотрении
+            'Отклонено': Отклонено
+            'Выполнен': Выполнен

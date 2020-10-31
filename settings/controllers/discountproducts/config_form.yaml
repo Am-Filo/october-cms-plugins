@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Discount Product
+
+# Model Form Field configuration
+form: $/gms/settings/models/discountproduct/fields.yaml
+
+# Model Class name
+modelClass: Gms\Settings\Models\DiscountProduct
+
+# Default redirect location
+defaultRedirect: gms/settings/discountproducts
+
+# Create page
+create:
+    title: Create Discount Product
+    redirect: gms/settings/discountproducts/update/:id
+    redirectClose: gms/settings/discountproducts
+
+# Update page
+update:
+    title: Edit Discount Product
+    redirect: gms/settings/discountproducts
+    redirectClose: gms/settings/discountproducts
+
+# Preview page
+preview:
+    title: Preview Discount Product

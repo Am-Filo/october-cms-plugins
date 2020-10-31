@@ -1,0 +1,15 @@
+1.0.1:
+  -  Create category table
+  -  create_categories_table.php
+1.0.2:
+  -  Create product table
+  -  create_products_table.php
+1.0.3:
+  -  Create key table product - category
+  -  create_products_key_table.php
+1.0.4:
+  -  Create information about site
+  -  create_information_table.php
+1.0.5:
+  -  Create services
+  -  create_additionalservices_table.php

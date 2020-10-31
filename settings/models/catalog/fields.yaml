@@ -1,0 +1,608 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+tabs:
+  fields:
+      main_details_section:
+          label: Главные сведения о товаре
+          type: section
+          span: full
+          comment: Данная секция представляет собой набор основных сведений для товара (Обязательно к заполнению) Slug заполняется автоматически при первом заполнении карточки товара
+          tab: 'Основное'
+      title:
+          label: Название
+          type: text
+          span: left
+          required: 1
+          comment: Название вашего товара
+          tab: 'Основное'
+      slug:
+          label: Slug
+          preset:
+              field: title
+              type: slug
+          span: right
+          type: text
+          comment: Чпу url для товара - меняется при вводе информации в поле Название
+          tab: 'Основное'
+      category_id:
+          label: Категория
+          type: dropdown
+          options: getListsOptions
+          span: left
+          tab: 'Основное'
+      fontsz:
+          label: Размер шрифта
+          type: text
+          span: right
+          comment: Стандартно - 21пт
+          default: 21
+          tab: 'Основное'
+      add_basket_switcher:
+          label: Разрешить добавление товара в корзину
+          type: switch
+          span: left
+          tab: 'Основное'
+      enable:
+          label: Включить товар
+          type: switch
+          span: right
+          comment: Если данный переключатель в позиции true, то товар будет выводится на сайте, если false - то не выведется
+          tab: 'Основное'
+      details_section:
+          label: Информация о товаре
+          type: section
+          span: full
+          comment: Данная секция представляет собой набор переключателей для добавления информации к товару
+          tab: 'Основное'
+      price_swicher:
+          label: Выводить цену\добавить цену
+          type: switch
+          span: left
+          default: false
+          comment: Можно включить и ввести цену товара, но не выводить (выключить)
+          tab: 'Основное'
+      price:
+          label: Цена товара
+          type: number
+          span: right
+          required: 1
+          default: 0
+          comment: Устанавливает цену товара
+          tab: 'Основное'
+          trigger:
+            action: show
+            field: price_swicher
+            condition: checked
+      count_swicher:
+          label: Выводить количество товара\добавить количество товара
+          type: switch
+          span: left
+          default: false
+          comment: Можно включить и ввести количество товара, но не выводить (выключить)
+          tab: 'Основное'
+      count:
+          label: Количество
+          type: text
+          span: right
+          required: 1
+          default: 0
+          comment: Устанавливает количество товара
+          tab: 'Основное'
+          trigger:
+            action: show
+            field: count_swicher
+            condition: checked
+      new_swicher:
+          label: Новый товар (изм.)
+          type: switch
+          span: left
+          default: false
+          comment: Пункт предназначен для управления первым инфо блоком на странице карточки товара, при включении будет выводится блок с текстом 'Новый товар' (по умолчанию)
+          tab: 'Основное'
+      label_switcher:
+          label: 
+          type: text
+          comment: Текст в первом инфо блоке, по умолчанию стоит 'Новый товар', можно изменить, например - 'Скидка', 'Товар по акции', 'Распродажа','Только сегодня скидка 99%' и тд
+          default: "Новый товар"
+          span: right
+          tab: 'Основное'
+          trigger:
+            action: show
+            field: new_swicher
+            condition: checked
+      short_swicher:
+          label: Основное описание товара
+          type: switch
+          span: left
+          default: false
+          comment: Добавить описание
+          tab: 'Основное'
+      short_text:
+          label: Описание
+          type: richeditor
+          toolbarButtons: paragraphFormat|bold|italic|align|formatUL|formatOL|insertTable|insertImage|insertLink|fullscreen|html
+          size: giant
+          span: full
+          tab: 'Основное'
+          trigger:
+            action: show
+            field: short_swicher
+            condition: checked
+      content_swicher:
+          label: Основные приемущества товара
+          type: switch
+          span: left
+          default: false
+          comment: Добавить основные приемущества
+          tab: 'Основное'
+      content:
+          label: Основные приемущества
+          type: richeditor
+          toolbarButtons: paragraphFormat|bold|italic|align|formatUL|formatOL|insertTable|insertImage|insertLink|fullscreen|html
+          size: giant
+          span: full
+          tab: 'Основное'
+          trigger:
+            action: show
+            field: content_swicher
+            condition: checked
+      characteristic_swicher:
+          label: Характеристики товара
+          type: switch
+          span: left
+          default: false
+          comment: Добавить характеристики
+          tab: 'Основное'
+      characteristic:
+          label: Характеристики
+          type: richeditor
+          toolbarButtons: paragraphFormat|bold|italic|align|formatUL|formatOL|insertTable|insertLink|fullscreen|html
+          size: giant
+          span: full
+          tab: 'Основное'
+          trigger:
+            action: show
+            field: characteristic_swicher
+            condition: checked
+      files_section:
+          label: Добавление изображений к товару
+          type: section
+          span: full
+          tab: 'Основное'
+          comment: Добавляйте 1 или несколько изображений к вашему товару, добавлять так же можно и файлы *.gif. ПЕРВОЕ ИЗОБРАЖЕНИЕ БУДЕТ ОБЛОЖКОЙ ДАННОГО ТОВАРА
+      attachments:
+          label: Вложения
+          type: fileupload
+          tab: 'Основное'
+      file_att_sec:
+          label: 4 ссылки в карточках товаров
+          type: section
+          span: full
+          tab: 'Основное'
+      pl_enable:
+          label: Выводить ссылки
+          type: switch
+          span: full
+          tab: 'Основное'
+      file_att_sec_1:
+          label: Пункт - Сравнить *
+          type: section
+          span: full
+          tab: 'Основное'
+          trigger:
+            action: show
+            field: pl_enable
+            condition: checked
+      pl_1:
+          label: Название
+          type: text
+          span: left
+          tab: 'Основное'
+          default: Сравнить 
+          trigger:
+            action: show
+            field: pl_enable
+            condition: checked
+      pl_1_file:
+          label: Файл
+          span: right
+          type: fileupload
+          mode: file
+          tab: 'Основное'
+          trigger:
+            action: show
+            field: pl_enable
+            condition: checked
+      file_att_sec_2:
+          label: Пункт - Как применить
+          type: section
+          span: full
+          tab: 'Основное'
+          trigger:
+            action: show
+            field: pl_enable
+            condition: checked
+      pl_2:
+          label: Название
+          type: text
+          span: left
+          tab: 'Основное'
+          default: Как применить
+          trigger:
+            action: show
+            field: pl_enable
+            condition: checked
+      pl_2_file:
+          label: Файл
+          type: fileupload
+          mode: file
+          span: right
+          tab: 'Основное'
+          trigger:
+            action: show
+            field: pl_enable
+            condition: checked
+      file_att_sec_3:
+          label: Пункт - Сертификаты
+          type: section
+          span: full
+          tab: 'Основное'
+          trigger:
+            action: show
+            field: pl_enable
+            condition: checked
+      pl_3:
+          label: Название
+          type: text
+          span: left
+          tab: 'Основное'
+          default: Сертификаты
+          trigger:
+            action: show
+            field: pl_enable
+            condition: checked
+      pl_3_file:
+          label: Файл
+          type: fileupload
+          mode: file
+          span: right
+          tab: 'Основное'
+          trigger:
+            action: show
+            field: pl_enable
+            condition: checked
+      file_att_sec_4:
+          label: Пункт - Паспорт изделия
+          type: section
+          span: full
+          tab: 'Основное'
+          trigger:
+            action: show
+            field: pl_enable
+            condition: checked
+      pl_4:
+          label: Название
+          type: text
+          span: left
+          tab: 'Основное'
+          default: 'Паспорт изделия'
+          trigger:
+            action: show
+            field: pl_enable
+            condition: checked
+      pl_4_file:
+          label: Файл
+          span: right
+          type: fileupload
+          mode: file
+          tab: 'Основное'
+          trigger:
+            action: show
+            field: pl_enable
+            condition: checked
+            
+      enable_filter:
+          label: Включить фильтр
+          type: switch
+          span: full
+          tab: 'Фильтр'
+          default: false
+          comment: ''   
+      attachment_img:
+          label: Изображение для фильтра
+          type: mediafinder
+          mode: image
+          tab: 'Фильтр'
+          trigger:
+            action: show
+            field: enable_filter
+            condition: checked
+      enable_manufacturer:
+          label: Добавить производителя
+          type: switch
+          span: full
+          tab: 'Фильтр'
+          default: false
+          comment: ''  
+          trigger:
+            action: show
+            field: enable_filter
+            condition: checked
+      filter_manufacturer:
+          label: Производитель
+          type: dropdown
+          options: getListsFilterManufacturer
+          dependsOn: info
+          span: full
+          tab: 'Фильтр'
+          trigger:
+            action: show
+            field: enable_manufacturer
+            condition: checked
+
+      enable_performance:
+          label: Добавить производительность
+          type: switch
+          span: full
+          tab: 'Фильтр'
+          default: false
+          comment: ''      
+          trigger:
+            action: show
+            field: enable_filter
+            condition: checked
+      filter_performance:
+          label: Производительность
+          type: dropdown
+          options: getListsFilterPerformance
+          span: full
+          tab: 'Фильтр'
+          trigger:
+            action: show
+            field: enable_performance
+            condition: checked
+
+      enable_filtration_system:
+          label: Добавить систему фильтрации
+          type: switch
+          span: full
+          tab: 'Фильтр'
+          default: false
+          comment: ''      
+          trigger:
+            action: show
+            field: enable_filter
+            condition: checked
+      filter_filtration_system:
+          label: Система фильтрации
+          type: dropdown
+          options: getListsFilterFiltrationSystem
+          span: full
+          tab: 'Фильтр'
+          trigger:
+            action: show
+            field: enable_filtration_system
+            condition: checked
+
+      enable_air_heating:
+          label: Добавить подогрев воздуха
+          type: switch
+          span: full
+          tab: 'Фильтр'
+          default: false
+          comment: ''      
+          trigger:
+            action: show
+            field: enable_filter
+            condition: checked
+      filter_air_heating:
+          label: Подогрев воздуха
+          type: dropdown
+          options: getListsFilterAirHeating
+          span: full
+          tab: 'Фильтр'
+          trigger:
+            action: show
+            field: enable_air_heating
+            condition: checked
+
+      enable_silent:
+          label: Добавить уровень шума
+          type: switch
+          span: full
+          tab: 'Фильтр'
+          default: false
+          comment: ''       
+          trigger:
+            action: show
+            field: enable_filter
+            condition: checked
+      filter_silent:
+          label: Уровень шума
+          type: dropdown
+          options: getListsFilterSilent
+          span: full
+          tab: 'Фильтр'
+          trigger:
+            action: show
+            field: enable_silent
+            condition: checked
+
+      enable_humidity_sensor:
+          label: Добавить датчик влажности
+          type: switch
+          span: full
+          tab: 'Фильтр'
+          default: false
+          comment: ''  
+          trigger:
+            action: show
+            field: enable_filter
+            condition: checked
+      filter_humidity_sensor:
+          label: Датчик влажности
+          type: dropdown
+          options: getListsFilterHumiditySensor
+          span: full
+          tab: 'Фильтр'
+          trigger:
+            action: show
+            field: enable_humidity_sensor
+            condition: checked
+
+      enable_humidity_timer:
+          label: Добавить таймер влажности
+          type: switch
+          span: full
+          tab: 'Фильтр'
+          default: false
+          comment: ''  
+          trigger:
+            action: show
+            field: enable_filter
+            condition: checked
+      filter_humidity_timer:
+          label: Таймер влажности
+          type: dropdown
+          options: getListsFilterHumidityTimer
+          span: full
+          tab: 'Фильтр'
+          trigger:
+            action: show
+            field: enable_humidity_timer
+            condition: checked
+
+      enable_type:
+          label: Добавить тип
+          type: switch
+          span: full
+          tab: 'Фильтр'
+          default: false
+          comment: ''  
+          trigger:
+            action: show
+            field: enable_filter
+            condition: checked
+      filter_type:
+          label: Тип
+          type: dropdown
+          options: getListsFilterType
+          span: full
+          tab: 'Фильтр'
+          trigger:
+            action: show
+            field: enable_type
+            condition: checked
+
+      enable_colour:
+          label: Добавить цвет
+          type: switch
+          span: full
+          tab: 'Фильтр'
+          default: false
+          comment: ''  
+          trigger:
+            action: show
+            field: enable_filter
+            condition: checked
+      filter_colour:
+          label: Цвет
+          type: dropdown
+          options: getListsFilterColour
+          span: full
+          tab: 'Фильтр'
+          trigger:
+            action: show
+            field: enable_colour
+            condition: checked
+
+      enable_surface_temperature:
+          label: Добавить температуру поверхности
+          type: switch
+          span: full
+          tab: 'Фильтр'
+          default: false
+          comment: ''  
+          trigger:
+            action: show
+            field: enable_filter
+            condition: checked
+      filter_surface_temperature:
+          label: Температура поверхности
+          type: dropdown
+          options: getListsFilterSurfaceTemperature
+          span: full
+          tab: 'Фильтр'
+          trigger:
+            action: show
+            field: enable_surface_temperature
+            condition: checked
+
+      enable_power:
+          label: Добавить мощность
+          type: switch
+          span: full
+          tab: 'Фильтр'
+          default: false
+          comment: ''  
+          trigger:
+            action: show
+            field: enable_filter
+            condition: checked
+      filter_power:
+          label: Мощность
+          type: dropdown
+          options: getListsFilterPower
+          span: full
+          tab: 'Фильтр'
+          trigger:
+            action: show
+            field: enable_power
+            condition: checked
+            
+      enable_discount:
+          label: Включить скидки
+          type: switch
+          span: full
+          tab: 'Скидки'
+          default: false
+          comment: ''  
+      discount:
+          label: Скидки
+          type: partial
+          path: discount_product
+          span: full
+          commentHtml: true
+          comment: '<div class="col-md-6"><div class="col-md-12"><hr><h4>Поле - Количество:</h4><hr></div> <div class="col-md-12"style="background-color: #282828;color: white;padding-top: 15px;padding-bottom: 5px;border-radius: 5px;"><p>В данном поле вводится от какого количества данного товара будет действовать скидка <br>Например: ввели цифру 3.<br>Когда пользователь введет цифру 3 в карточке товара, то цена будет со скидкой от каждого товара: <p>цена_товара*скидку=скидка<br>цена_товара - скидка = товар_по_скидочной_цене<br>товар_по_скидочной_цене*3=общая_цена_со_скидкой</p>Если пользователь введет цифру 2,то формула будет такая: <p>Цена_товара*2=общая_цена</p></p></div></div><div class="col-md-6"><div class="col-md-12"><hr><h4>Поле - Скидка:</h4><hr></div> <div class="col-md-12"style="background-color: #282828;color: white;padding-top: 15px;padding-bottom: 5px;border-radius: 5px;"><p>Вводится скидка без знака %</p></div></div>'
+          tab: 'Скидки'
+          trigger:
+            action: show
+            field: enable_discount
+            condition: checked
+      enable_seo:
+          label: Включить title & description
+          type: switch
+          span: full
+          tab: 'SEO'
+          default: false
+          comment: ''  
+      title_seo:
+          label: meta - title
+          type: text
+          span: left
+          tab: 'SEO'
+          trigger:
+            action: show
+            field: enable_seo
+            condition: checked
+      description_seo:
+          label: meta - description
+          type: text
+          span: right
+          tab: 'SEO'
+          trigger:
+            action: show
+            field: enable_seo
+            condition: checked
+      

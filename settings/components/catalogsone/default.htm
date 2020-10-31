@@ -1,0 +1,130 @@
+{% set slug_category = Catalogsone.GetCategoryes %}
+<div class="col-md-12">
+	<ol class="breadcrumb">
+		<li><a href="{{ 'home'|page }}">Главная</a></li>
+		<li><a href="{{ 'katalog'|page }}">Каталог</a></li>
+		<li><a href="{{ 'home'|page }}/catalog/{{slug_category.slug}}">{{slug_category.title}}</a></li>
+		<li class="active"><a href="{{ 'home'|page }}/catalog/{{slug_category.slug}}/{{catcalone.slug}}">{{catcalone.title}}</a></li>
+	</ol>
+</div>
+
+
+{% if catcalone.enable %}
+<div class="container cont-m-info">
+	<div class="row info-cs">
+		<div class="col-md-12 h-inf">
+			<h1>{{catcalone.title}}</h1>
+			{% if catcalone.price_swicher %}
+			<div id="prprod">
+				{% partial "site/pricepr" %}
+			</div>
+			{% endif %}
+			<br>
+		</div>
+		{% if catcalone.add_basket_switcher %}
+		<div class="col-md-12">
+
+			{{ form_ajax('Catalogs::onFAdd', {
+			class: 'form',
+			data: { id: catcalone.id },
+			update: { bskt: '#basket' }
+		}) }}
+
+		<input type="number" min="1" name="quantity" placeholder="количество" class="add-btn">
+		<button type="submit" data-attach-loading class="add-btn g-btn">Добавить в корзину</button>
+
+		{{ form_close() }}
+
+	</div>
+	{% endif %}
+</div>
+<div class="clerfix"></div>
+</div>
+
+
+<div class="container cont-m-info">
+	<div class="row info-cs">
+
+		<div class="col-md-5 col-sm-5 ">
+			{% if catcalone.new_swicher %}
+			<button class="add-btn btn-block new-t">{{catcalone.label_switcher}}</button> {% endif %} {% if catcalone.count_swicher %}
+			<button class="add-btn btn-block new-s">На складе : {{catcalone.count}} шт</button> {% endif %}
+			<br>
+			<section class="regular slider info-slider">
+				{% for image in catcalone.attachments %}
+				<div>
+					<a data-fancybox="gallery" href="{{ image.path }}" title="{{catcalone.title}}">
+						<img src="{{ image.path |resize(450, 450, { mode: 'crop', quality: '80', extension: 'png' }) }}">
+					</a>
+				</div>
+				{% endfor %}
+			</section>
+
+			<div id="forder">
+				{% partial "site/forder" %}
+			</div>
+		</div>
+
+		<div class="col-md-7 col-sm-7 h-inf">
+			{% if catcalone.characteristic_swicher %}
+			<h3>Характеристики</h3>
+			<div class="col-md-12 char-tb">
+				<br> {{catcalone.characteristic|raw}} {% endif %} 
+			</div>
+			<div class="clearfix"></div>
+			{% if catcalone.pl_enable %}
+			<div class="col-md-6 col-sm-6 info-4">
+				<i class="gms-i-cat g-c-one"></i>
+				<a class="fancybox link-cr-gms" data-src="{{catcalone.pl_1_file.path}}" data-fancybox>{{ catcalone.pl_1 }}</a>
+			</div>
+			<div class="clearfix hidden-md hidden-lg hidden-sm"></div>
+			<div class="col-md-6 col-sm-6 info-4">
+				<i class="gms-i-cat g-c-two"></i>
+				<a class="link-cr-gms" href="http://vozduhvdome.su/catalog/gotovye-resheniya" target="_blank">{{ catcalone.pl_2 }}</a>
+			</div>
+			<div class="clearfix hidden-md hidden-lg hidden-sm"></div>
+			<div class="col-md-6 col-sm-6 info-4">
+				<i class="gms-i-cat g-c-four"></i>
+				<a class="fancybox link-cr-gms" data-src="{{catcalone.pl_3_file.path}}" data-fancybox>{{ catcalone.pl_3 }}</a>
+			</div>
+			<div class="clearfix hidden-md hidden-lg hidden-sm"></div>
+			<div class="col-md-6 col-sm-6 info-4">
+				<i class="gms-i-cat g-c-three"></i>
+				<a class="fancybox link-cr-gms" data-src="{{catcalone.pl_4_file.path}}" data-fancybox>{{ catcalone.pl_4 }}</a>
+			</div>
+			<div class="clearfix hidden-md hidden-lg hidden-sm"></div>
+
+			{% endif %}
+		</div>
+
+		<div class="clearfix"></div>
+
+		<div class="card-main-12 about-site col-md-12 info-about-text">
+			{% if catcalone.short_swicher %}
+			<h3>Описание</h3>
+			<h4>
+				{{catcalone.short_text|raw}}
+			</h4>
+			{% endif %} {% if catcalone.content_swicher %}
+			<h3>Основные преимущества</h3>
+			<h4>
+				{{catcalone.content|raw}}
+			</h4>
+			{% endif %}
+		</div>
+	</div>
+</div>
+
+{% else %}
+<div class="container cont-m-info">
+	<div class="row info-cs">
+		<div class="col-md-12 h-inf">
+			<h1>Данный товар отсутствует</h1>
+			<h4>цена: 0 руб.</h4>
+			<br>
+		</div>
+	</div>
+	<div class="clerfix"></div>
+</div>
+
+{% endif %}

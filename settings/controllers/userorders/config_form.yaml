@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: User Order
+
+# Model Form Field configuration
+form: $/gms/settings/models/userorder/fields.yaml
+
+# Model Class name
+modelClass: Gms\Settings\Models\UserOrder
+
+# Default redirect location
+defaultRedirect: gms/settings/userorders
+
+# Create page
+create:
+    title: Create User Order
+    redirect: gms/settings/userorders/update/:id
+    redirectClose: gms/settings/userorders
+
+# Update page
+update:
+    title: Edit User Order
+    redirect: gms/settings/userorders
+    redirectClose: gms/settings/userorders
+
+# Preview page
+preview:
+    title: Preview User Order

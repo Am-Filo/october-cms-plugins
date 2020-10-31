@@ -1,0 +1,256 @@
+{% set slug_category =  __SELF__.GetCategory %}
+
+{% put styles %}
+<title>{{ slug_category.title_seo }}</title>
+<meta name="title" content="{{ slug_category.title_seo }}">
+<meta name="description" content="{{ slug_category.desc_seo }}">
+{% endput %}
+
+<div class="col-md-12">
+	<ol class="breadcrumb">
+		<li><a href="{{ 'home'|page }}">Главная</a></li>
+		<li><a href="{{ 'katalog'|page }}">Каталог</a></li>
+		<li><a href="{{ 'home'|page }}/catalog/{{slug_category.slug}}">{{slug_category.title}}</a></li>
+	</ol>
+</div>
+
+{% if slug_category.enable_filter %}
+
+<div class="col-md-12 col-sm-12 col-xs-12 bgc-w filter-b">
+  <div class="col-md-12 col-sm-12 text-center">
+    <h3>{{slug_category.title_filter}}<a data-request-update="filter: '#fil_er'" data-request-data="name: '1'" data-request="Category::onStartFilter" data-attach-loading class="refr-filter"><i class="fa fa-refresh" aria-hidden="true"></i></a></h3>
+  </div>
+
+{{ form_ajax('Category::onStartFilter', {
+  class: 'form',
+  update: { 'filter': '#fil_er' }
+}) }}
+
+
+{% if slug_category.enable_manufacturer %}
+{% set filters = __SELF__.getListsFilterManufacturer %}
+  <div class="col-md-3 col-sm-6 mt17">
+    <div class="form-group">
+      <select name="manufacturer" class="form-control">
+        <option value="0" selected>Производитель</option>
+        
+        {% for filter in filters %}
+        <option value="{{ filter.id }}">{{ filter.info }}</option>
+        {% endfor %}
+        
+      </select>
+    </div>
+  </div>
+{% endif %}
+
+{% if slug_category.enable_performance %}
+{% set filters = __SELF__.getListsFilterPerformance %}
+  <div class="col-md-3 col-sm-6 mt17">
+    <div class="form-group">
+      <select name="performance" class="form-control">
+        <option selected>Производительность</option>
+        
+        {% for filter in filters %}
+        <option value="{{ filter.id }}">{{ filter.info }}</option>
+        {% endfor %}
+        
+      </select>
+    </div>
+  </div>
+{% endif %}
+
+{% if slug_category.enable_filtration_system %}
+{% set filters = __SELF__.getListsFilterFiltrationSystem %}
+  <div class="col-md-3 col-sm-6 mt17">
+    <div class="form-group">
+      <select name="filtration_system" class="form-control">
+        <option selected>Система фильтрации</option>
+        
+        {% for filter in filters %}
+        <option value="{{ filter.id }}">{{ filter.info }}</option>
+        {% endfor %}
+        
+      </select>
+    </div>
+  </div>
+{% endif %}
+
+{% if slug_category.enable_air_heating %}
+{% set filters = __SELF__.getListsFilterAirHeating %}
+  <div class="col-md-3 col-sm-6 mt17">
+    <div class="form-group">
+      <select name="air_heating" class="form-control">
+        <option selected>Подогрев воздуха</option>
+        
+        {% for filter in filters %}
+        <option value="{{ filter.id }}">{{ filter.info }}</option>
+        {% endfor %}
+        
+      </select>
+    </div>
+  </div>
+{% endif %}
+
+{% if slug_category.enable_silent %}
+{% set filters = __SELF__.getListsFilterSilent %}
+  <div class="col-md-3 col-sm-6 mt17">
+    <div class="form-group">
+      <select name="silent" class="form-control">
+        <option selected>Уровень шума</option>
+        
+        {% for filter in filters %}
+        <option value="{{ filter.id }}">{{ filter.info }}</option>
+        {% endfor %}
+        
+      </select>
+    </div>
+  </div>
+{% endif %}
+
+{% if slug_category.enable_humidity_sensor %}
+{% set filters = __SELF__.getListsFilterHumiditySensor %}
+  <div class="col-md-3 col-sm-6 mt17">
+    <div class="form-group">
+      <select name="humidity_sensor" class="form-control">
+        <option selected>Датчик влажности</option>
+        
+        {% for filter in filters %}
+        <option value="{{ filter.id }}">{{ filter.info }}</option>
+        {% endfor %}
+        
+      </select>
+    </div>
+  </div>
+{% endif %}
+
+{% if slug_category.enable_humidity_timer %}
+{% set filters = __SELF__.getListsFilterHumidityTimer %}
+  <div class="col-md-3 col-sm-6 mt17">
+    <div class="form-group">
+      <select name="humidity_timer" class="form-control">
+        <option selected>Таймер влажности</option>
+        
+        {% for filter in filters %}
+        <option value="{{ filter.id }}">{{ filter.info }}</option>
+        {% endfor %}
+        
+      </select>
+    </div>
+  </div>
+{% endif %}
+
+{% if slug_category.enable_type %}
+{% set filters = __SELF__.getListsFilterType %}
+  <div class="col-md-3 col-sm-6 mt17">
+    <div class="form-group">
+      <select name="type" class="form-control">
+        <option selected>Тип</option>
+        
+        {% for filter in filters %}
+        <option value="{{ filter.id }}">{{ filter.info }}</option>
+        {% endfor %}
+        
+      </select>
+    </div>
+  </div>
+{% endif %}
+
+{% if slug_category.enable_colour %}
+{% set filters = __SELF__.getListsFilterColour %}
+  <div class="col-md-3 col-sm-6 mt17">
+    <div class="form-group">
+      <select name="colour" class="form-control">
+        <option selected>Цвет</option>
+        
+        {% for filter in filters %}
+        <option value="{{ filter.id }}">{{ filter.info }}</option>
+        {% endfor %}
+        
+      </select>
+    </div>
+  </div>
+{% endif %}
+
+{% if slug_category.enable_surface_temperature %}
+{% set filters = __SELF__.getListsFilterSurfaceTemperature %}
+  <div class="col-md-3 col-sm-6 mt17">
+    <div class="form-group">
+      <select name="surface_temperature" class="form-control">
+        <option selected>Температура поверхности</option>
+        
+        {% for filter in filters %}
+        <option value="{{ filter.is }}">{{ filter.info }}</option>
+        {% endfor %}
+        
+      </select>
+    </div>
+  </div>
+{% endif %}
+
+{% if slug_category.enable_power %}
+{% set filters = __SELF__.getListsFilterPower %}
+  <div class="col-md-3 col-sm-6 mt17">
+    <div class="form-group">
+      <select name="power" class="form-control">
+        <option selected>Мощность</option>
+        
+        {% for filter in filters %}
+        <option value="{{ filter.id }}">{{ filter.info }}</option>
+        {% endfor %}
+        
+      </select>
+    </div>
+  </div>
+{% endif %}
+<button type="submit" class="add-btn g-btn btn-block">Отфильтровать</button>
+{{ form_close() }}
+  <div class="col-md-12">
+    <hr class="hr_fil">
+      <div id="fil_er">
+        {% partial __SELF__ ~ '::filter' %}
+      </div>
+  </div>
+</div>
+<div class="clearfix"></div>
+{% endif %}
+
+{% set categorys = __SELF__.ViewProducts %}
+<div class="container cont-m-info">
+	<div class="row info-cs">
+		<div class="col-md-12 h-inf kt">
+			<h1>{{slug_category.title}}</h1>
+			<br>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</div>
+
+<div class="row info-ck">
+	<div class="col-md-12">
+		<div class="clearfix"></div>
+		<br>
+		{% for catalog in categorys %}
+		{% if	catalog.enable %}
+		
+		<div class="col-md-3 col-sm-4 col-xs-12">
+			<div class="thumbnail">
+				<h3 style="font-size: {{ catalog.fontsz }}px;"><a href="/catalog/{{slug_category.slug}}/{{ catalog.slug }}">{{ catalog.title }}</a></h3>
+				{% if catalog.price_swicher %}<h4>{{ catalog.price }} рублей</h4>{% endif %}
+				<a href="/catalog/{{slug_category.slug}}/{{ catalog.slug }}">
+					<img alt="..." src="{{ catalog.attachments[0].path |resize(233, 233, { mode: 'crop', quality: '60', extension: 'png' }) }}">
+				</a>
+				{% if catalog.add_basket_switcher %}
+				<div class="caption">
+					<a data-request-update="bskt: '#basket'" data-request-data="id: {{catalog.id}}, quantity: 1" data-request="Catalogs::onFAdd" data-attach-loading class="g-btn btn-block">Добавить в корзину</a>
+				</div>
+				{% endif %}
+			</div>
+		</div>
+		{% endif %}
+		{% endfor %}
+		<div class="clearfix"></div>
+		<div class="col-md-12">
+		{{slug_category.content|raw}}
+		</div>
+	</div>
+</div>
